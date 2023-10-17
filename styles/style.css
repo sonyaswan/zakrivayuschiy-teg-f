@@ -174,10 +174,6 @@
   background-color: var(--themes-main-color, #000);
 }
 
-.card__img {
-  object-position: top right;
-}
-
 .img_filter-antiques {
   filter: sepia(100%) contrast(85%);
 }
