@@ -274,11 +274,6 @@
   padding: 25px;
 }
 
-.card__icon-button {
-  border: none;
-  background-color: transparent;
-}
-
 .button-base {
   position: relative;
   display: flex;
