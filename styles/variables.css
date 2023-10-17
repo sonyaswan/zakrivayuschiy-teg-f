@@ -7,6 +7,8 @@
   --title-font-weight: 700; /* 785 */
   --themes-background: #FFF; /* #000 */
   --themes-main-color: #000; /* #00CC14 */
+  --button-text: #FFF; /* #00CC14 */
+  --heart-main-color: #FF0000;
 
   --background-image:
       repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), /* #000 */

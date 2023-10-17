@@ -10,6 +10,7 @@
   --title-font-weight: 785;
   --themes-background: #000;
   --themes-main-color: #00CC14;
+  --button-text: #00CC14;
 
   --background-image:
       repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
@@ -22,6 +23,7 @@
   --title-font-weight: 700;
   --themes-background: #FFF;
   --themes-main-color: #000;
+  --button-text: #FFF;
 
   --background-image:
       repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
@@ -35,6 +37,7 @@
     --title-font-weight: 785;
     --themes-background: #000;
     --themes-main-color: #00CC14;
+    --button-text: #00CC14;
 
     --background-image:
         repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
