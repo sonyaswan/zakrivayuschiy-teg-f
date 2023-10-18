@@ -339,7 +339,8 @@ dialog::backdrop {
 .form {
   display: grid;
   grid-template-columns: 39px 1fr;
-  grid-template-rows: auto 38px auto;
+  /*grid-template-rows: auto 38px auto;*/
+  grid-template-rows: auto auto;
   justify-items: stretch;
   row-gap: 30px;
   column-gap: 20px;
@@ -350,7 +351,7 @@ dialog::backdrop {
   grid-column: span 2;
   text-transform: uppercase;
 }
-
+/*
 .input-in-dialog {
   grid-column: span 2;
   border: 2px solid var(--themes-main-color, #000);
@@ -368,7 +369,7 @@ dialog::backdrop {
   font-size: 12px;
   text-align: center;
 }
-
+*/
 .footer {
   display: flex;
   justify-content: center;
