@@ -191,7 +191,7 @@
 }
 
 .img-filter-hangover {
-  filter: invert(80%) contrast(150%) saturate(110%) blur(3px) ;
+  filter: invert(20%) contrast(150%) saturate(110%) blur(2px) ;
 }
 
 .img-filter-smog {
