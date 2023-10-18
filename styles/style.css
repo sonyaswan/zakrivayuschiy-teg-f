@@ -174,10 +174,6 @@
   background-color: var(--themes-main-color, #000);
 }
 
-.card__img {
-  object-position: top right;
-}
-
 .img_filter-antiques {
   filter: sepia(100%) contrast(85%);
 }
@@ -195,7 +191,7 @@
 }
 
 .img-filter-hangover {
-  filter: invert(80%) contrast(150%) saturate(110%) blur(10px) ;
+  filter: invert(80%) contrast(150%) saturate(110%) blur(3px) ;
 }
 
 .img-filter-smog {
@@ -262,6 +258,10 @@
   border-inline: 2px solid var(--themes-main-color, #000);
   padding-inline: 25px;
   padding-block-start: 25px;
+}
+
+.large-text {
+  font-size: 36px;
 }
 
 .card__buttons {
