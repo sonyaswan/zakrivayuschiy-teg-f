@@ -13,6 +13,45 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+@keyframes arrow {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -4px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes grow {
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes shine {
+  to {
+    opacity: 1;
+  }
+}
+
+.like-icon {
+  transform-origin: center;
+}
 
 .contour {
   fill: var(--themes-main-color, #000);
@@ -21,12 +60,12 @@
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .core {
   fill: transparent;
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .sparks {
@@ -36,54 +75,42 @@
 
 .card__icon-button:hover .core {
   fill: var(--themes-main-color, #000);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--themes-main-color, #000);
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .card__icon-button:active .core {
   fill: var(--heart-main-color, #FF0000);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:active .main-body {
   fill: var(--heart-main-color, #FF0000);
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-main-color, #FF0000);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-main-color, #FF0000);
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-main-color, #FF0000);
-  transition: fill 0.3s 0.06s;
-}
-
-@keyframes grow {
-  to {
-    scale: 1.5;
-  }
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .heart {
-  transform-origin: center;
+  transform-origin: inherit;
   animation: grow 0.3s ease-in 0.1s 1 alternate;
-}
-
-@keyframes shine {
-  to {
-    opacity: 1;
-  }
 }
 
 .like-icon.is-liked .sparks {
