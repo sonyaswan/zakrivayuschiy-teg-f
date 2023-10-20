@@ -106,7 +106,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button1" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button1" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -170,7 +170,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button2" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button2" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -233,7 +233,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button3" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button3" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -297,7 +297,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button4" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button4" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -361,7 +361,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button5" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button5" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -424,7 +424,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button6" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button6" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -488,7 +488,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button7" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button7" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -554,7 +554,7 @@
                 />
               </svg>
             </button>
-            <button type="button" id="like-button8" class="button button-base card__like-button accent-font" aria-hidden="true">
+            <button type="button" id="like-button8" class="button button-base card__like-button accent-font">
               <span class="button__text button__text-difference">
                 Like
               </span>
@@ -565,9 +565,6 @@
 
     </ul>
 
-  </main>
-
-  <footer class="footer">
     <button type="button"
       class="button button-base button-save accent-font"
       onclick="window['dialog-id'].showModal()"
@@ -580,23 +577,18 @@
         Сохранить на память
       </span>
     </button>
-  </footer>
+
+  </main>
 
   <dialog id="dialog-id" class="dialog">
     <form name="dialog-save" method="dialog" class="form accent-font">
       <svg class="img" viewBox="0 0 39 39" aria-hidden="true">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
-      <p>
+      <p class="line-height-increased">
         Вставьте дискету, чтобы продолжить
       </p>
-      <!-- ком. ревьюера Добавьте атрибут placeholder и required -->
-      <!-- закоменчено для версии на проверку - автотесты не пропускают, при отправке формы с input страница обновляется. ошибка:
-        -e 1. Модальное окно должно закрываться, при нажатии на кнопку "Ок". Страница обновляться не должна. -->
-      <!--<input type=text required placeholder="*** input ***" class="input-in-dialog">-->
-      <button type="submit"
-        class="button button-base button-submit-in-dialog"
-      >
+      <button type="submit" class="button button-base button-submit-in-dialog">
         <span class="button__text-difference">
           ок
         </span>

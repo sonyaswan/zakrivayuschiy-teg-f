@@ -54,6 +54,10 @@
   line-height: normal;
 }
 
+.line-height-increased {
+  line-height: 1.5; /* 21px */
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -68,7 +72,19 @@
 
 .header__logo {
   margin-block-end: 20px;
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  font-size: clamp(49px, (100vw - 375px) * 16 / 325 + 49px, 65px);
+  /*
+  изначальный расчет функции clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem) через https://clamp.font-size.app/
+  по точкам (375, 49) и (700, 65) [(content-size, размер шрифта)].
+
+  расчет линейной функции с записью через простые дроби
+  clamp(49px, (100vw - 375px) * 16 / 325 + 49px, 65px)
+
+  при размере шрифта 49px (3.0625rem) ширина header__logo = 343px, соответственно на размерах страницы < 343 происходит переполненение.
+  страница нормально должна работать до 320px судя по изначально заданной в проекте min-inline-size: 320px; для .page.
+  в макете этот момент не описан, поэтому добавлен медизапрос с подобранными значениями.
+  чтобы не плодить сущности и не делать еще один медиазапрос с другими условиями, формула вставлена в @media (width <= 375px)
+  */
   text-transform: uppercase;
 }
 
@@ -331,9 +347,14 @@
   inline-size: min(100%, clamp(341px, (100vw - 375px) * 16 / 325 + 341px, 357px));
 }
 
-dialog::backdrop {
+.dialog::backdrop {
   opacity: 0.75;
   background: var(--themes-main-color, #000);
+}
+
+.dialog:modal {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .form {
@@ -352,40 +373,14 @@ dialog::backdrop {
   text-transform: uppercase;
 }
 
-/* ----------------------- !!! ----------------------- */
-.input-in-dialog {
-  grid-column: span 2;
-  border: 2px solid var(--themes-main-color, #000);
-  padding-inline: 10px;
-  outline: none;
-  color: var(--button-text, #FFF);
-  text-transform: uppercase;
-  background-color: var(--input-background, #000);
-  appearance: none;
-  inline-size: 100%;
-}
-
-.input-in-dialog::placeholder {
-  opacity: 0.6;
-  color: inherit;
-  font-size: 12px;
-  text-align: center;
-}
-/* ----------------------- !!! ----------------------- */
-
-.footer {
-  display: flex;
-  justify-content: center;
-}
-
 @media (width <= 375px) {
+  .header__logo {
+    font-size: clamp(41px, (100vw - 320px) * 8 / 55 + 41px, 49px); /*для избежания горизонтального скрола на размерах от 320 до 375 */
+  }
+
   .button-save {
     grid-template-columns: auto;
     grid-template-rows: 28px auto;
     inline-size: min(100%, 310px);
-  }
-
-  .header__logo {
-    font-size: clamp(2.5625rem, -0.3466rem + 14.5455vw, 3.0625rem); /*для избежания горизонтального скрола на размерах от 320 до 375 */
   }
 }
