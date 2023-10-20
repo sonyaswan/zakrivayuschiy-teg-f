@@ -17,7 +17,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 49px;
+  gap: 100px;
   margin-block: 100px;
   color: var(--themes-main-color, #000);
   font-family: var(--base-font), Tahoma, sans-serif;
@@ -63,7 +63,6 @@
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  margin-block-end: 51px;
   border: 2px solid var(--themes-main-color, #000);
   padding-block-start: clamp(120px, (100vw - 375px) * 16 / 325 + 120px, 136px);
   padding-block-end: 25px;
