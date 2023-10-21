@@ -16,6 +16,7 @@
       repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), /* #000 */
       linear-gradient(180deg, #E7E7E7, #E7E7E7 0.01%, #1A1A1A 100%); /* #007F0C 0%, #004306 100% */
 
-  --content-size: min(100%, 700px); /* clamp(20rem, 0rem + 100vw, 43.75rem); */
+  --content-size: clamp(320px, 100vw, 700px); /*получается гор. скрол на десктоп на малых разрешениях, но хорошо выглядит на моб.*/
+  /*--content-size: min(100%, 700px); /* не вызывает проблем с горизонтальным скроллом, но есть предположение, что ломает отображаение на моб. */
   --content-size-vw: clamp(320px, 100vw, 700px); /*оставила для высоты изображений, так как дает лучший результат по pixel perfect, чем aspect ratio 1/1 */
 }
