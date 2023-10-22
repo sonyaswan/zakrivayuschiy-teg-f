@@ -26,7 +26,7 @@
   line-height: normal;
   background-color: var(--themes-background, #FFF);
   background-image: var(--background-image);
-  background-size: cover;
+  background-size: 100% 100dvb;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
