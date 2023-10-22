@@ -29,7 +29,7 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
-  /*min-block-size: 100dvb;*/
+  min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--base-font-weight, 400);
 }
 
