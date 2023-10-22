@@ -329,13 +329,16 @@
 }
 
 .button-save {
-  display: grid;
-  grid-template-columns: 21px auto;
-  grid-template-rows: auto;
+  display: flex;
   gap: 8px;
-  padding-inline: 20px;
   padding-block: 15px;
   inline-size: 339px;
+  justify-content: center;
+}
+
+.button-save__floppy {
+  width: 21px;
+  height: 21px;
 }
 
 .dialog {
@@ -378,8 +381,12 @@
   }
 
   .button-save {
-    grid-template-columns: auto;
-    grid-template-rows: 28px auto;
+    flex-direction: column;
     inline-size: min(100%, 310px);
+  }
+
+  .button-save__floppy {
+    width: 28px;
+    height: 28px;
   }
 }
